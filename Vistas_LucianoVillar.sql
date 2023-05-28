@@ -59,7 +59,6 @@ FOREIGN KEY fk_id_usuario (id_usuario)REFERENCES usuario(id_usuario),
 FOREIGN KEY fk_id_juego(id_juego)REFERENCES juego(id_juego) 
 );
 
-
 SELECT * FROM lifegame.categoria;
 select * from lifegame.pais;
 select * from lifegame.usuario;
@@ -67,6 +66,10 @@ select * from lifegame.empresa;
 select * from lifegame.juego;
 select * from lifegame.valoracion;
 select * from lifegame.compra;
+
+//Despues de importar los archivos del PowerPoint ,ejecutar el siguiente codigo:
+
+/*
 
 select * from lifegame.pais;
 INSERT INTO pais (id_pais, nombre) VALUES (11, 'Peru'), (12,'Bolivia'),(13,'Ecuador'); 
@@ -88,7 +91,7 @@ select * FROM juegos_usa;
 CREATE or replace VIEW notFreeBuy as select usuario.nombre, compra.id_compra, compra.id_juego,compra.monto from usuario inner join compra on usuario.id_usuario = compra.id_usuario where monto != 0;
 select * from notfreebuy;
 
-
+*/
 
 
 
